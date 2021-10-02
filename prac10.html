@@ -1,108 +1,94 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Calculator js</title>
-	<style type="text/css">
-		body{
-			background-color: LightGray;
-		}
-		h1{			
-			color: rgb(96,96,96);
-			font-weight: 4px;
-		}
-		hr{
-			border: 1px solid Gray;
-			opacity: 0.7;
-		}
-		div.container{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		div.container .is1{
-			margin-right: 9rem;
-		}
-		div.container .is2{
-			margin-left:  9rem;
-		}
-	</style>
-	<script type="text/javascript">
-		function add()
-		{
-			var x=parseInt(document.getElementById('t1').value);
-			var y=parseInt(document.getElementById('t2').value);
-			var Result=x+y;
-			document.getElementById('t3').value=Result;
-		}
-		function sub()
-		{
-			var x=parseInt(document.getElementById('t1').value);
-			var y=parseInt(document.getElementById('t2').value);
-			var Result=x-y;
-			document.getElementById('t3').value=Result;
-		}
-		function mul()
-		{
-			var x=parseInt(document.getElementById('t1').value);
-			var y=parseInt(document.getElementById('t2').value);
-			var Result=x*y;
-			document.getElementById('t3').value=Result;
-		}
-		function div()
-		{
-			var x=parseInt(document.getElementById('t1').value);
-			var y=parseInt(document.getElementById('t2').value);
-			var Result=x/y;
-			document.getElementById('t3').value=Result;
-		}
-		function rem()
-		{
-			var x=parseInt(document.getElementById('t1').value);
-			var y=parseInt(document.getElementById('t2').value);
-			var Result=x%y;
-			document.getElementById('t3').value=Result;
-		}
-	</script>
-</head>
-<body>
- <form>
- 	<fieldset>
- 		<center><h1>Simple Calculator</h1></center><hr>
- 		<div class="container">
- 		<img class="is1" src="call2.png" alt="" width="300" height="200">
- 		<center><table border="2" cellspacing="0" >
- 			<tr>
- 				<th>First Digit:</th>
- 				<td><input type="number" id="t1"></td>
- 			</tr>
- 			<tr>
- 				<th>Second Digit:</th>
- 				<td><input type="number" id="t2"></td>
- 			</tr>
- 			<tr>
- 				<th>Result:</th>
- 				<td><input type="number" id="t3"></td>
- 			</tr>
- 			<tr>
- 				<th><input type="button" value="+" onclick="add()" ></th>
- 				<th><input type="button" value="-" onclick="sub()" ></th>
- 				
- 				
- 			</tr>
- 			<tr>
- 				<th><input type="button" value="*" onclick="mul()" ></th>
- 				<th><input type="button" value="/" onclick="div()" ></th>
- 			</tr>
- 			<tr>
- 				<th><input type="button" value="%" onclick="rem()" ></th>
- 				<th><input type="reset" value="Clear"></th>
- 			</tr>
- 		</table></center>
- 		<img class="is2" src="call3.jpg" alt="" width="300" height="200">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator js</title>
+	<link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+      function add() {
+        var x = parseInt(document.getElementById("t1").value);
+        var y = parseInt(document.getElementById("t2").value);
+        var Result = x + y;
+        document.getElementById("t3").value = Result;
+      }
+      function sub() {
+        var x = parseInt(document.getElementById("t1").value);
+        var y = parseInt(document.getElementById("t2").value);
+        var Result = x - y;
+        document.getElementById("t3").value = Result;
+      }
+      function mul() {
+        var x = parseInt(document.getElementById("t1").value);
+        var y = parseInt(document.getElementById("t2").value);
+        var Result = x * y;
+        document.getElementById("t3").value = Result;
+      }
+      function div() {
+        var x = parseInt(document.getElementById("t1").value);
+        var y = parseInt(document.getElementById("t2").value);
+        var Result = x / y;
+        document.getElementById("t3").value = Result;
+      }
+      function rem() {
+        var x = parseInt(document.getElementById("t1").value);
+        var y = parseInt(document.getElementById("t2").value);
+        var Result = x % y;
+        document.getElementById("t3").value = Result;
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <center><h1>Simple Calculator</h1></center>
+        <hr />
+        <div class="container">
+          <img class="is1" src="call2.png" alt="" width="300" height="200" />
+          <center>
+            <table border="2" cellspacing="0">
+              <tr>
+                <th>First Digit:</th>
+                <td><input type="number" id="t1" /></td>
+              </tr>
+              <tr>
+                <th>Second Digit:</th>
+                <td><input type="number" id="t2" /></td>
+              </tr>
+              <tr>
+                <th>Result:</th>
+                <td><input type="number" id="t3" /></td>
+              </tr>
+              <tr>
+                <th><input type="button" value="+" onclick="add()" /></th>
+                <th><input type="button" value="-" onclick="sub()" /></th>
+              </tr>
+              <tr>
+                <th><input type="button" value="*" onclick="mul()" /></th>
+                <th><input type="button" value="/" onclick="div()" /></th>
+              </tr>
+              <tr>
+                <th><input type="button" value="%" onclick="rem()" /></th>
+                <th><input type="reset" value="Clear" /></th>
+              </tr>
+            </table>
+          </center>
+          <img class="is2" src="call3.jpg" alt="" width="300" height="200" />
         </div>
- 		<center><h4>Made with  <img src="love.jpg" alt=" not able to attach " width="20" height="20"> By Chaitanya Rastogi.</h4>
-	</center>
- 	</fieldset>
- </form>
-</body>
+        <center>
+          <h4>
+            Made with
+            <img
+              src="love.jpg"
+              alt=" not able to attach "
+              width="20"
+              height="20"
+            />
+            By Chaitanya Rastogi.
+          </h4>
+        </center>
+      </fieldset>
+    </form>
+  </body>
 </html>
